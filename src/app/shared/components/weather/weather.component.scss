@@ -1,0 +1,93 @@
+
+.search-card {
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.search-input {
+  flex: 1;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.search-btn {
+  min-width: 120px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+
+.weather-bg {
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b')
+    no-repeat center center / cover;
+}
+
+.weather-card {
+  background: rgba(0, 0, 0, 0.6);   
+  color: #ffffff;                 
+}
+
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  color:#090909;
+}
+
+
+.header h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+.main-temp {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.main-temp span {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-box {
+  background: rgba(0,0,0,0.35);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+
+.sun {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}

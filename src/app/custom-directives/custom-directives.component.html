@@ -1,0 +1,20 @@
+
+
+
+<p *ngIf="instock" style="background-color:aqua">
+    The Name is <strong>{{name}}</strong> and age is <strong>{{age}}</strong>
+</p>
+
+
+<p *ngIf="!instock" style="background-color:blueviolet">
+   this product not in stock 
+</p>
+
+
+
+<p 
+*ngIf="instock"
+class="text-warning"
+[ngClass]="{'bg-success':true}">
+    the name is <strong>{{name}}</strong> and age is <strong>{{age}}</strong>
+</p>

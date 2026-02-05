@@ -1,0 +1,70 @@
+<div class="weather-bg">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+
+            <!-- 🔍 SEARCH BOX (OUTSIDE ngFor) -->
+            <div class="col-lg-6 col-md-8 mb-4">
+                <div class="search-card">
+                    <input type="text" class="form-control search-input" placeholder="Enter City Name to See Weather"
+                        [(ngModel)]="cityname" />
+
+                    <button class="btn btn-primary search-btn" (click)="getweather()">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 🌦 WEATHER CARD -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8" *ngFor="let w of weatherarr">
+                <div class="weather-card">
+
+                    <div class="header">
+                        <h2>{{ w.name }}, {{ w.sys.country }}</h2>
+                        <p class="date">
+                            {{ w.dt * 1000 | date:'fullDate' }}
+                        </p>
+                    </div>
+
+                    <div class="main-temp">
+                        <span>{{ w.main.temp }}°C</span>
+                        <p class="desc">
+                            {{ w.weather[0].description | titlecase }}
+                        </p>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <p>Feels Like</p>
+                            <h5>{{ w.main.feels_like }}°C</h5>
+                        </div>
+
+                        <div class="info-box">
+                            <p>Humidity</p>
+                            <h5>{{ w.main.humidity }}%</h5>
+                        </div>
+
+                        <div class="info-box">
+                            <p>Wind</p>
+                            <h5>{{ w.wind.speed }} m/s</h5>
+                        </div>
+
+                        <div class="info-box">
+                            <p>Pressure</p>
+                            <h5>{{ w.main.pressure }} hPa</h5>
+                        </div>
+                    </div>
+
+                    <div class="sun">
+                        <span>🌅 {{ w.sys.sunrise * 1000 | date:'shortTime' }}</span>
+                        <span>🌇 {{ w.sys.sunset * 1000 | date:'shortTime' }}</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
