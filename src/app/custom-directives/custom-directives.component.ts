@@ -12,6 +12,7 @@ export class CustomDirectivesComponent implements OnInit {
   age:string = '16'
 
   instock!:boolean
+  
   constructor() { }
 
   ngOnInit(): void {

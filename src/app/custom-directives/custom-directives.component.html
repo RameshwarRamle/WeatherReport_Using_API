@@ -1,8 +1,13 @@
-
-
-
 <p *ngIf="instock" style="background-color:aqua">
     The Name is <strong>{{name}}</strong> and age is <strong>{{age}}</strong>
+</p>
+
+
+<p [ngStyle]="{
+    'background-color': instock? 'red' : 'pink',
+    color : instock? 'green' : 'black'
+}">
+    the product in stock
 </p>
 
 
@@ -17,4 +22,44 @@
 class="text-warning"
 [ngClass]="{'bg-success':true}">
     the name is <strong>{{name}}</strong> and age is <strong>{{age}}</strong>
+</p> 
+
+
+
+<p appCsshighlight>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quisquam dolores assumenda quasi corrupti eligendi
+    molestias, magni officia iste exercitationem!
 </p>
+
+<p 
+[getclass]="'alert-primary'"
+appCsshighlight>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quisquam dolores assumenda quasi corrupti eligendi
+    molestias, magni officia iste exercitationem!
+</p> 
+
+
+<p [hovercolor]="'orange'" [defaultcolor]="'red'" appCsshighlight>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus porro quidem doloribus possimus expedita
+    asperiores vero temporibus ipsum illum! Magni est dolor illo, ut ipsum, eum odit tenetur, omnis aut provident
+    eveniet! Incidunt laborum reprehenderit, ipsa ipsum vitae quis delectus!
+</p>
+
+
+
+<p>
+    {{'angular' | uppercase}}
+</p>
+
+<p>
+    {{'ANGULAR' | lowercase}}
+</p>
+
+<p>
+    {{'angular' | titlecase}}
+</p>
+
+<p>{{ 5000 | currency:'INR' }}</p>
+
+
+<p>{{ 12.3456 | number:'1.2-2' }}</p>

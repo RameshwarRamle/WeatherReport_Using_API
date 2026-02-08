@@ -7,6 +7,10 @@ import { CustomDirectivesComponent } from './custom-directives/custom-directives
 import { WeatherComponent } from './shared/components/weather/weather.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './shared/pipe/filter.pipe';
+import { CricketersComponent } from './shared/components/cricketers/cricketers.component';
+import { CsshighlightDirective } from './shared/directives/csshighlight.directive';
+import { AllPipesPipe } from './shared/pipes/all-pipes.pipe';
 
 
 @NgModule({
@@ -14,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CustomDirectivesComponent,
     WeatherComponent,
+    FilterPipe,
+    CricketersComponent,
+    CsshighlightDirective,
+    AllPipesPipe,
   ],
   imports: [
     BrowserModule,
